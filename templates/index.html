@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片风格转换－－Demo</title>
+</head>
+<body>
+    <h1>图片风格转换</h1>
+    <hr width="100%"/>
+    <form id="theForm" method="post", enctype="multipart/form-data">
+        <input type="file" name="pic" style="margin-top:20px;"/>
+        <label>选择转换风格</label>
+        <select name="mode">
+            <option value="wave">wave</option>
+            <option value="cubist">cubist</option>
+            <option value="denoised_starry">denoised_starry</option>
+            <option value="feathers">feathers</option>
+            <option value="mosaic">mosaic</option>
+            <option value="scream">scream</option>
+            <option value="udnie">udnie</option>
+        </select>
+    <br/>
+    <input type="button" onclick="ajaxForm()" value="提交" id="submit"/>
+    </form>
+<br/>
+<h3>合成图片</h3>
+<hr width="100%"/>
+<p id="result" style="background-color: beige;"></p>
+<img id = 'showpic' src='' width="400" height="400" alt="合成图片"/>
+<script lang="javascript" src="{{ url_for('static', filename = 'js/jquery-3.3.1.min.js') }}"></script>
+<script>
+    function ajaxForm(){
+        var form= new FormData(document.getElementById("theForm"));
+        var result = "";
+        $.ajax({
+            url:"{{ url_for('generate_pic') }}",
+            type:"post",
+            data:form,
+            dataType: 'json',
+            processData:false,
+            contentType:false,
+            success:function(res){
+                   $("#result").text(res.path);
+                   $("#showpic").attr('src', res.path);
+            },
+            error:function(e){
+                    $("#result").text(e);
+            }
+        })
+}
+</script>
+</body>
+</html>
