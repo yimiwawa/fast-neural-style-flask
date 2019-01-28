@@ -12,6 +12,7 @@
 ## 训练模型
 在原项目带有的7中模型（wave，cubist，denoised_starry，mosaic，scream，feathers，udnie）基础上，添加了铅笔画的模型[pencil]().
 
+模型下载链接:https://pan.baidu.com/s/1LV46jqAe-M0CV8dOekoUYA  密码:ezvv
 
 ## 部署与运行:
 
