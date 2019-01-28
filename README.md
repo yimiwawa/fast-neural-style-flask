@@ -25,8 +25,8 @@ python predict_flask.py
 在浏览器中输入 http://host:port/index，即可用。
 
 ## 示例
-| configuration | style | sample |
+| configuration | 原图 | 转换风格后图片 |
 | :---: | :----: | :----: |
-| [pencil.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/wave.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_wave.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/wave.jpg)  |
+| [pencil.yml](https://github.com/yimiwawa/fast-neural-style-flask/blob/master/conf/pencil.yml) |![](https://github.com/yimiwawa/fast-neural-style-flask/blob/master/img/hls.jpeg)|  ![](https://github.com/yimiwawa/fast-neural-style-flask/blob/master/static/generated/hls.jpeg)  |
 
 
