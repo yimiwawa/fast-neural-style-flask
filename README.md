@@ -2,6 +2,8 @@
 
 本项目核心代码基于[fast-neural-style-tensorflow](https://github.com/hzy46/fast-neural-style-tensorflow)，在此基础上，添加了简单的flask框架，实现了页面上传图片，选择转换风格，生成转换图片并展示的流程。
 
+更多说明，移步CSDN博客[图片风格快速转换的简单web实现](https://blog.csdn.net/pirage/article/details/86685963)
+
 ## Requirements：
 - Python 2.7.x
 - <b>Now support Tensorflow >= 1.0</b>
